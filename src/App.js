@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { Link, Route } from 'react-router-dom';
+
+import MoviesPage from './components/pages/MoviesPage';
 function App() {
   return (
     <div className="App">
@@ -16,9 +19,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
         </a>
+        <Link to="movies">Movies</Link>
       </header>
+      <Route path="/movies" component={MoviesPage} />
     </div>
   );
 }
